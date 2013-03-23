@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.eclipse.xtend</groupId>
+  <artifactId>logging-annotation</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Logging Annotation</name>
+  <description>Xtend Active Annotation which adds various logging facility to the selected classes</description>
+  
+  
+ <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <xtend.version>2.4.0</xtend.version>
+    <guava.version>13.0</guava.version>
+    <junit.version>4.10</junit.version>
+    <java.version>1.6</java.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.eclipse.xtend</groupId>
+      <artifactId>org.eclipse.xtend.lib</artifactId>
+      <version>${xtend.version}</version>
+    </dependency>
+
+    <dependency>                                                                                                                               
+      <groupId>junit</groupId>                                                                                                                 
+      <artifactId>junit</artifactId>                                                                                                           
+      <version>${junit.version}</version>                                                                                                      
+      <scope>test</scope>                                                                                                                      
+    </dependency>                                                                                                                              
+  </dependencies>                                                                                                                              
+  <build>                                                                                                                                      
+    <plugins>                                                                                                                                  
+      <plugin>                                                                                                                                 
+        <groupId>org.apache.maven.plugins</groupId>                                                                                            
+        <artifactId>maven-compiler-plugin</artifactId>                                                                                         
+        <version>2.3.2</version>                                                                                                               
+        <configuration>                                                                                                                        
+          <source>${java.version}</source>                                                                                                                 
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.12</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.eclipse.xtend</groupId>
+        <artifactId>xtend-maven-plugin</artifactId>
+        <version>${xtend.version}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>compile</goal>
+              <goal>testCompile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <repositories>
+    <repository>
+      <id>xtend-repos</id>
+      <url>http://build.eclipse.org/common/xtend/maven/</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>xtend-repos</id>
+      <url>http://build.eclipse.org/common/xtend/maven/</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
+  
+</project>
