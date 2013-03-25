@@ -5,6 +5,8 @@
   <version>0.0.2-SNAPSHOT</version>
   <name>Logging Annotation</name>
   <description>Xtend Active Annotation which adds various logging facility to the selected classes</description>
+  <inceptionYear>2013</inceptionYear>
+  <url>http://github.com/gzsombor/logging-annotation</url>
   
   
  <properties>
@@ -60,6 +62,12 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.4</version>
+      </plugin>
+      
     </plugins>
   </build>
   <repositories>
@@ -81,4 +89,13 @@
     </pluginRepository>
   </pluginRepositories>
   
+  <scm>
+  	<url>scm:git:git://git@github.com:gzsombor/logging-annotation.git</url>
+  	<connection>scm:git:git@github.com:gzsombor/logging-annotation.git</connection>
+  	<developerConnection>scm:git:git@github.com:gzsombor/logging-annotation.git</developerConnection>
+  </scm>
+  <ciManagement>
+  	<url>https://renszarv.ci.cloudbees.com/job/logging-annotation/</url>
+  	<system>Jenkins</system>
+  </ciManagement>
 </project>
