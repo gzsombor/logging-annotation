@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.eclipse.xtend</groupId>
   <artifactId>logging-annotation</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.1</version>
   <name>Logging Annotation</name>
   <description>Xtend Active Annotation which adds various logging facility to the selected classes</description>
   
@@ -91,6 +91,7 @@
   	<url>scm:git:git://git@github.com:gzsombor/logging-annotation.git</url>
   	<connection>scm:git:git@github.com:gzsombor/logging-annotation.git</connection>
   	<developerConnection>scm:git:git@github.com:gzsombor/logging-annotation.git</developerConnection>
+    <tag>logging-annotation-0.1</tag>
   </scm>
   <ciManagement>
   	<url>https://renszarv.ci.cloudbees.com/job/logging-annotation/</url>
